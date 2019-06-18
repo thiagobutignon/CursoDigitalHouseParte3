@@ -30,4 +30,8 @@ class LoginController {
             }
         }
     }
+    
+    func createUser() {
+        
+    }
 }
