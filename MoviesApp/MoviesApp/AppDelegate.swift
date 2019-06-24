@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  MovieApps
+//  MoviesApp
 //
 //  Created by Thiago B Claramunt on 24/06/19.
 //  Copyright © 2019 Thiago B Claramunt. All rights reserved.
