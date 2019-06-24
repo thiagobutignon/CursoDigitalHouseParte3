@@ -7,14 +7,23 @@
 //
 
 import UIKit
+import PMSuperButton
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var button: PMSuperButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func teste(_ sender: PMSuperButton) {
+        button.showLoader(userInteraction: true)
+        
+        print("Funciona")
+        
+        
+    }
+    
 }
 

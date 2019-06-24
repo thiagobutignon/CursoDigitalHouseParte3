@@ -1,0 +1,16 @@
+PODS:
+  - PMSuperButton (3.0.1)
+
+DEPENDENCIES:
+  - PMSuperButton
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - PMSuperButton
+
+SPEC CHECKSUMS:
+  PMSuperButton: 2bef6f8659a5df969a69887f496ef309480c65eb
+
+PODFILE CHECKSUM: b90542dbc5911cb9550af0643ce4b32ec623a85c
+
+COCOAPODS: 1.6.1
