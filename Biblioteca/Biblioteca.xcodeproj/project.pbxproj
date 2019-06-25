@@ -12,6 +12,8 @@
 		83850AA622C2B2100017575B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83850AA422C2B2100017575B /* Main.storyboard */; };
 		83850AA822C2B2100017575B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83850AA722C2B2100017575B /* Assets.xcassets */; };
 		83850AAB22C2B2100017575B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83850AA922C2B2100017575B /* LaunchScreen.storyboard */; };
+		83850AB322C2B87B0017575B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83850AB222C2B87B0017575B /* Book.swift */; };
+		83850AB522C2B8C50017575B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83850AB422C2B8C50017575B /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		83850AA722C2B2100017575B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83850AAA22C2B2100017575B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83850AAC22C2B2100017575B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83850AB222C2B87B0017575B /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		83850AB422C2B8C50017575B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +60,22 @@
 			children = (
 				83850AA022C2B2100017575B /* AppDelegate.swift */,
 				83850AA222C2B2100017575B /* LoginViewController.swift */,
+				83850AB622C2B8C80017575B /* Model */,
 				83850AA422C2B2100017575B /* Main.storyboard */,
 				83850AA722C2B2100017575B /* Assets.xcassets */,
 				83850AA922C2B2100017575B /* LaunchScreen.storyboard */,
 				83850AAC22C2B2100017575B /* Info.plist */,
 			);
 			path = Biblioteca;
+			sourceTree = "<group>";
+		};
+		83850AB622C2B8C80017575B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83850AB422C2B8C50017575B /* Category.swift */,
+				83850AB222C2B87B0017575B /* Book.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +151,8 @@
 			files = (
 				83850AA322C2B2100017575B /* LoginViewController.swift in Sources */,
 				83850AA122C2B2100017575B /* AppDelegate.swift in Sources */,
+				83850AB322C2B87B0017575B /* Book.swift in Sources */,
+				83850AB522C2B8C50017575B /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
