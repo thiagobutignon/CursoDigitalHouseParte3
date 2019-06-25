@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class WelcomeViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     
     let usernameAlert = UIAlertController(title: "Usuário não encontrado", message: "Coloque um nome de usuário válido", preferredStyle: .alert)
