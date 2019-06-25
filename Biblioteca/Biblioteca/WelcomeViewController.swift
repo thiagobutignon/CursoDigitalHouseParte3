@@ -13,7 +13,6 @@ class WelcomeViewController: UIViewController {
     
     let usernameAlert = UIAlertController(title: "Usuário não encontrado", message: "Coloque um nome de usuário válido", preferredStyle: .alert)
     
-   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

@@ -9,31 +9,41 @@
 import UIKit
 import CoreData
 
-class BooksTableViewController: UIViewController  {
+protocol BooksData {
+    func createBook()
+    func retriveBooks()
+}
+
+class BooksTableViewController: UITableViewController  {
+    
+    lazy var dataSource: BooksTableViewDataSource = {
+        let dataSource = BooksTableViewDataSource()
+        dataSource.fetchedResultControllerDelegate = self as? NSFetchedResultsControllerDelegate
+        return dataSource
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         createBook()
-        
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        retriveBooks()
+        tableView.register(UINib(nibName: "BookTableViewCell", bundle: nil), forCellReuseIdentifier: "bookCell")
+        tableView.dataSource = dataSource
+     
     }
+    
+    
     
     // MARK: - Table view data source
     
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
     
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 0
-//    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 1
+    }
     
     /*
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -89,10 +99,11 @@ class BooksTableViewController: UIViewController  {
      // Pass the selected object to the new view controller.
      }
      */
-    
-    
-    //     Função que se comunica com o Core Data
-    
+
+}
+
+extension BooksTableViewController: BooksData {
+   
     func createBook() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
         
@@ -117,6 +128,22 @@ class BooksTableViewController: UIViewController  {
         } catch let error as NSError {
             print("===== Deu bem ruim! \(error), \(error.userInfo)")
             
+        }
+    }
+    
+    func retriveBooks() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Book")
+        
+        do {
+            let result = try managedContext.fetch(fetchRequest)
+            for data in result as! [NSManagedObject] {
+                print(data.value(forKey: "author") as! String)
+            }
+        } catch {
+            print("Deu ruim!")
         }
     }
 }
