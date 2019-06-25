@@ -16,5 +16,10 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func alertaButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func actionSheetButton(_ sender: UIButton) {
+    }
 }
 
