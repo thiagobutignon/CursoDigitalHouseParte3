@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="113.04347826086958" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Books Table View Controller-->
         <scene sceneID="ZPj-af-yeU">
             <objects>
-                <viewController id="Ahh-sS-f4m" sceneMemberID="viewController">
+                <viewController id="Ahh-sS-f4m" customClass="BooksTableViewController" customModule="Biblioteca" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J3r-We-MLK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

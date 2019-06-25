@@ -14,6 +14,7 @@
 		83850AAB22C2B2100017575B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83850AA922C2B2100017575B /* LaunchScreen.storyboard */; };
 		83850AB322C2B87B0017575B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83850AB222C2B87B0017575B /* Book.swift */; };
 		83850ABA22C2BBD10017575B /* Library.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83850AB822C2BBD10017575B /* Library.xcdatamodeld */; };
+		83850ABC22C2BD740017575B /* BooksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83850ABB22C2BD740017575B /* BooksTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		83850AAC22C2B2100017575B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83850AB222C2B87B0017575B /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		83850AB922C2BBD10017575B /* Library.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Library.xcdatamodel; sourceTree = "<group>"; };
+		83850ABB22C2BD740017575B /* BooksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				83850AB722C2BBB70017575B /* CoreData */,
 				83850AA022C2B2100017575B /* AppDelegate.swift */,
+				83850ABB22C2BD740017575B /* BooksTableViewController.swift */,
 				83850AA222C2B2100017575B /* WelcomeViewController.swift */,
 				83850AB622C2B8C80017575B /* Model */,
 				83850AA422C2B2100017575B /* Main.storyboard */,
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83850ABA22C2BBD10017575B /* Library.xcdatamodeld in Sources */,
+				83850ABC22C2BD740017575B /* BooksTableViewController.swift in Sources */,
 				83850AA322C2B2100017575B /* WelcomeViewController.swift in Sources */,
 				83850AA122C2B2100017575B /* AppDelegate.swift in Sources */,
 				83850AB322C2B87B0017575B /* Book.swift in Sources */,
