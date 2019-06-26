@@ -10,37 +10,64 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Lista View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIAlert" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ListaViewController" customModule="UIAlert" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUT-2a-J0K">
-                                <rect key="frame" x="69" y="237" width="41" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Alerta"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CEX-CT-ihr">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="zFd-e7-baw">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zFd-e7-baw" id="FvP-p0-nhl">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lista de Compras" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jci-6c-1Rd">
+                                <rect key="frame" x="140" y="48.5" width="134" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Nx-ih-95A">
+                                <rect key="frame" x="364" y="44" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
                                 <connections>
-                                    <action selector="alertaButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jao-8Q-L9R"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yb-hi-1QH">
-                                <rect key="frame" x="268" y="237" width="84" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ActionSheet"/>
-                                <connections>
-                                    <action selector="actionSheetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ehi-a4-07t"/>
+                                    <action selector="addButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qA7-yq-OSo"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CEX-CT-ihr" firstAttribute="top" secondItem="3Nx-ih-95A" secondAttribute="bottom" constant="14" id="0vH-1y-QiB"/>
+                            <constraint firstItem="jci-6c-1Rd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1Ng-Mi-txm"/>
+                            <constraint firstItem="CEX-CT-ihr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6x4-Gk-nQ2"/>
+                            <constraint firstItem="CEX-CT-ihr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BKh-IR-XNb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Nx-ih-95A" secondAttribute="trailing" constant="20" id="BTT-ap-807"/>
+                            <constraint firstItem="CEX-CT-ihr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Lnf-ES-ukZ"/>
+                            <constraint firstItem="3Nx-ih-95A" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jci-6c-1Rd" secondAttribute="trailing" constant="8" symbolic="YES" id="Ner-zC-nQl"/>
+                            <constraint firstItem="3Nx-ih-95A" firstAttribute="centerY" secondItem="jci-6c-1Rd" secondAttribute="centerY" id="SBn-eu-lh3"/>
+                            <constraint firstItem="3Nx-ih-95A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="otG-ZK-7at"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="productListTableView" destination="CEX-CT-ihr" id="Jtd-vu-Ono"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="155.07246376811597" y="20.758928571428569"/>
         </scene>
     </scenes>
 </document>
