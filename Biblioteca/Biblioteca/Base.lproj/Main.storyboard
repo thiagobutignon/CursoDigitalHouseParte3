@@ -243,6 +243,36 @@
             </objects>
             <point key="canvasLocation" x="1961" y="814"/>
         </scene>
+        <!--Add Book View Controller-->
+        <scene sceneID="2lm-wM-BKI">
+            <objects>
+                <viewController storyboardIdentifier="AddBookViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kWG-zU-sgn" customClass="AddBookViewController" customModule="Biblioteca" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HuW-ge-0Kr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sds-Xd-E7V"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Em-BG-vxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2936" y="488"/>
+        </scene>
+        <!--Statistic View Controller-->
+        <scene sceneID="Hhc-ny-fnI">
+            <objects>
+                <viewController storyboardIdentifier="StatisticViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hcg-1I-8Sm" customClass="StatisticViewController" customModule="Biblioteca" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yZa-L1-OlD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wDF-7V-Rpq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wtQ-AR-zKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3880" y="488"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="qFC-dT-KfC">
             <objects>
@@ -257,14 +287,14 @@
             </objects>
             <point key="canvasLocation" x="1026" y="867"/>
         </scene>
-        <!--View Controller-->
+        <!--Scroll View Controller-->
         <scene sceneID="lZf-eN-wtH">
             <objects>
-                <viewController id="R9k-dO-xgY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScrollViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R9k-dO-xgY" customClass="ScrollViewController" customModule="Biblioteca" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f9M-Pd-msP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DS3-Z9-Npb" userLabel="First Responder" sceneMemberID="firstResponder"/>

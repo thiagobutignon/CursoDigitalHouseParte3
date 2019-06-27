@@ -10,7 +10,7 @@ import UIKit
 
 class StatisticViewController: UIViewController {
 
-    
+    var controllerColor: UIColor = UIColor(red: 0.59, green: 0.23, blue: 0.96, alpha: 1.0)
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,3 +18,6 @@ class StatisticViewController: UIViewController {
 
 
 }
+
+extension StatisticViewController: ColoredView {}
+

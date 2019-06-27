@@ -24,6 +24,9 @@ class MainViewController: UIViewController {
         return self.storyboard?.instantiateViewController(withIdentifier: "StatisticViewController")
     }()
 
+    var listBooksViewController: ListBooksViewController!
+    
+    @IBOutlet var navigationView: NavigationView!
     override func viewDidLoad() {
         super.viewDidLoad()
 

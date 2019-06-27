@@ -23,6 +23,8 @@
 		83CB58C822C52716001A1B39 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB58C722C52716001A1B39 /* ScrollViewController.swift */; };
 		83CB58CA22C528D5001A1B39 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB58C922C528D5001A1B39 /* AddBookViewController.swift */; };
 		83CB58CC22C52958001A1B39 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB58CB22C52958001A1B39 /* StatisticViewController.swift */; };
+		83CB58CE22C52B9F001A1B39 /* ListBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB58CD22C52B9F001A1B39 /* ListBooksViewController.swift */; };
+		83CB58D022C52C19001A1B39 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB58CF22C52C19001A1B39 /* NavigationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		83CB58C722C52716001A1B39 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		83CB58C922C528D5001A1B39 /* AddBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
 		83CB58CB22C52958001A1B39 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
+		83CB58CD22C52B9F001A1B39 /* ListBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBooksViewController.swift; sourceTree = "<group>"; };
+		83CB58CF22C52C19001A1B39 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 				83CB58C522C526AF001A1B39 /* MainViewController.swift */,
 				83CB58CB22C52958001A1B39 /* StatisticViewController.swift */,
 				83CB58C922C528D5001A1B39 /* AddBookViewController.swift */,
+				83CB58CD22C52B9F001A1B39 /* ListBooksViewController.swift */,
 				83CB58C722C52716001A1B39 /* ScrollViewController.swift */,
 			);
 			path = View;
@@ -125,6 +130,7 @@
 		83CB58C422C50F30001A1B39 /* NavigationView */ = {
 			isa = PBXGroup;
 			children = (
+				83CB58CF22C52C19001A1B39 /* NavigationView.swift */,
 			);
 			path = NavigationView;
 			sourceTree = "<group>";
@@ -201,9 +207,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83CB58D022C52C19001A1B39 /* NavigationView.swift in Sources */,
 				83850ABC22C2BD740017575B /* BooksTableViewController.swift in Sources */,
 				83850AA322C2B2100017575B /* WelcomeViewController.swift in Sources */,
 				83CB58C122C432F5001A1B39 /* Book+CoreDataClass.swift in Sources */,
+				83CB58CE22C52B9F001A1B39 /* ListBooksViewController.swift in Sources */,
 				83CB58CC22C52958001A1B39 /* StatisticViewController.swift in Sources */,
 				83CB58CA22C528D5001A1B39 /* AddBookViewController.swift in Sources */,
 				83CB58B022C32EF0001A1B39 /* LibraryDataProvider.swift in Sources */,
