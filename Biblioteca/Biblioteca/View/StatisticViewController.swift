@@ -12,7 +12,7 @@ class StatisticViewController: UIViewController {
 
     @IBOutlet var backgroundView: UIView!
     
-    var controllerColor: UIColor = UIColor(red: 0.59, green: 0.23, blue: 0.96, alpha: 1.0)
+    var controllerColor: UIColor = UIColor(red:0.99, green:0.80, blue:0.43, alpha:1.0)
     override func viewDidLoad() {
         super.viewDidLoad()
         
