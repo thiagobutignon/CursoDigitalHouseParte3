@@ -52,31 +52,6 @@ class LibraryDataProvider {
         return 0
     }
   
-    func addBook(author: String, categoryType: String, isbn: String, language: String, price: Double, stock: Int16, title: String) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        let bookEntity = NSEntityDescription.entity(forEntityName: "Book", in: managedContext)!
-        
-        let book = NSManagedObject(entity: bookEntity, insertInto: managedContext)
-        
-        book.setValue(author, forKey: "author")
-        book.setValue(categoryType, forKey: "categoryType")
-        book.setValue(isbn, forKey: "isbn")
-        book.setValue(language, forKey: "language")
-        book.setValue(price, forKey: "price")
-        book.setValue(stock, forKey: "stock")
-        book.setValue(title, forKey: "title")
-        
-        do {
-            try managedContext.save()
-        } catch let error as NSError {
-            print("===== Deu bem ruim! \(error), \(error.userInfo)")
-            
-        }
-    }
-    
     func retriveStringData(forKey: String) -> String {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return "" }
         

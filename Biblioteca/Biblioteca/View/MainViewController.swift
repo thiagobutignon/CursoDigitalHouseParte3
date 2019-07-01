@@ -20,12 +20,14 @@ class MainViewController: UIViewController {
         return self.storyboard?.instantiateViewController(withIdentifier: "AddBookViewController")
     }()
     
+    lazy var listBooksViewController: UIViewController! = {
+        return self.storyboard?.instantiateViewController(withIdentifier: "ListBooksViewController")
+    }()
+    
     lazy var statisticViewController: UIViewController! = {
         return self.storyboard?.instantiateViewController(withIdentifier: "StatisticViewController")
     }()
 
-    var listBooksViewController: ListBooksViewController!
-    
     @IBOutlet var navigationView: NavigationView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -50,5 +52,36 @@ extension MainViewController {
     
     @IBAction func handleStatisticIconTap(_ sender: UITapGestureRecognizer) {
         scrollViewController.setController(to: statisticViewController, animated: true)
+    }
+    
+    @IBAction func handleListButton(_ sender: UITapGestureRecognizer) {
+        scrollViewController.setController(to: listBooksViewController, animated: true)
+    }
+}
+
+extension MainViewController: ScrollViewControllerDelegate {
+    var viewControllers: [UIViewController?] {
+        return [addBookViewController,listBooksViewController, statisticViewController]
+    }
+    
+    var initialViewController: UIViewController {
+        return listBooksViewController
+    }
+    
+    func scrollViewDidScroll() {
+        let min: CGFloat = 0
+        let max: CGFloat = scrollViewController.pageSize.width
+        let x = scrollViewController.scrollView.contentOffset.x
+        let result = ((x - min) / (max - min)) - 1
+        
+        var controller: UIViewController?
+        
+        if scrollViewController.isControllerVisible(addBookViewController) {
+            controller = addBookViewController
+        } else if scrollViewController.isControllerVisible(listBooksViewController) {
+            controller = listBooksViewController
+        }
+        
+        navigationView.animate(to: controller, percent: result)
     }
 }

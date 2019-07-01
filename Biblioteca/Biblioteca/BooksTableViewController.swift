@@ -18,7 +18,6 @@ class BooksTableViewController: UITableViewController  {
         tableView.register(UINib(nibName: "BookTableViewCell", bundle: nil), forCellReuseIdentifier: "bookCell")
         libraryDataProvider = LibraryDataProvider()
         libraryDataProvider?.delegate = self
-        libraryDataProvider?.addBook(author: "Thiago", categoryType: "Android", isbn: "12345", language: "pt-br", price: 12.30, stock: 100, title: "Meu livro")
         
         //        libraryDataProvider?.deleteAll()
         

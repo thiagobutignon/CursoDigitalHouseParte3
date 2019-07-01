@@ -73,7 +73,7 @@ fileprivate extension ScrollViewController {
     }
     
     func indexFor(controller: UIViewController?) -> Int? {
-        return viewControllers.index(where: {$0 == controller})
+        return viewControllers.firstIndex(where: {$0 == controller})
     }
 }
 

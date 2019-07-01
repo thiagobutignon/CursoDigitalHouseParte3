@@ -10,11 +10,21 @@ import UIKit
 
 class ListBooksViewController: UIViewController {
 
+    @IBOutlet var backgroundView: UIView!
+    
+    var controllerColor: UIColor = UIColor(red: 0.29, green: 0.53, blue: 0.36, alpha: 1.0)
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        backgroundView.layer.cornerRadius = 20
+        backgroundView.layer.masksToBounds = true
     }
     
-
-  
-
+    @IBAction func buttonTapped(_ sender: Any) {
+        print("List Book VC")
+    }
+    
 }
+
+extension ListBooksViewController: ColoredView {}

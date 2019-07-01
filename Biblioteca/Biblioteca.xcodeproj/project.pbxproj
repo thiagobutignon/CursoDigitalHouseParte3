@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		836A6E1B22CA780400E33DA2 /* AddBookDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A6E1A22CA780400E33DA2 /* AddBookDataProvider.swift */; };
+		836A6E2322CAB19E00E33DA2 /* NavigationViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A6E2222CAB19E00E33DA2 /* NavigationViewAnimation.swift */; };
 		83850AA122C2B2100017575B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83850AA022C2B2100017575B /* AppDelegate.swift */; };
 		83850AA322C2B2100017575B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83850AA222C2B2100017575B /* WelcomeViewController.swift */; };
 		83850AA622C2B2100017575B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83850AA422C2B2100017575B /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		836A6E1A22CA780400E33DA2 /* AddBookDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookDataProvider.swift; sourceTree = "<group>"; };
+		836A6E2222CAB19E00E33DA2 /* NavigationViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewAnimation.swift; sourceTree = "<group>"; };
 		83850A9D22C2B2100017575B /* Biblioteca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biblioteca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83850AA022C2B2100017575B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83850AA222C2B2100017575B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				83CB58AF22C32EF0001A1B39 /* LibraryDataProvider.swift */,
+				836A6E1A22CA780400E33DA2 /* AddBookDataProvider.swift */,
 			);
 			path = DataProvider;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				83CB58CF22C52C19001A1B39 /* NavigationView.swift */,
+				836A6E2222CAB19E00E33DA2 /* NavigationViewAnimation.swift */,
 			);
 			path = NavigationView;
 			sourceTree = "<group>";
@@ -210,6 +216,7 @@
 				83CB58D022C52C19001A1B39 /* NavigationView.swift in Sources */,
 				83850ABC22C2BD740017575B /* BooksTableViewController.swift in Sources */,
 				83850AA322C2B2100017575B /* WelcomeViewController.swift in Sources */,
+				836A6E2322CAB19E00E33DA2 /* NavigationViewAnimation.swift in Sources */,
 				83CB58C122C432F5001A1B39 /* Book+CoreDataClass.swift in Sources */,
 				83CB58CE22C52B9F001A1B39 /* ListBooksViewController.swift in Sources */,
 				83CB58CC22C52958001A1B39 /* StatisticViewController.swift in Sources */,
@@ -221,6 +228,7 @@
 				83CB58C822C52716001A1B39 /* ScrollViewController.swift in Sources */,
 				83CB58C222C432F5001A1B39 /* Book+CoreDataProperties.swift in Sources */,
 				83CB58BE22C4326C001A1B39 /* Library.xcdatamodeld in Sources */,
+				836A6E1B22CA780400E33DA2 /* AddBookDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
