@@ -18,8 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InstaCats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N36-s6-WhU">
+                                <rect key="frame" x="120" y="76" width="174" height="38"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UAx-up-tPg">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="146" width="414" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zKX-rq-9FZ">
                                     <size key="itemSize" width="50" height="50"/>
@@ -32,10 +38,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="UAx-up-tPg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="BfD-Wx-Ehh"/>
-                            <constraint firstItem="UAx-up-tPg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Eqg-Hi-aOI"/>
-                            <constraint firstItem="UAx-up-tPg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="da0-HP-cLR"/>
-                            <constraint firstItem="UAx-up-tPg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wM6-u3-HmN"/>
+                            <constraint firstItem="UAx-up-tPg" firstAttribute="top" secondItem="N36-s6-WhU" secondAttribute="bottom" constant="32" id="7Jf-hy-qzf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UAx-up-tPg" secondAttribute="bottom" id="K84-0g-gYH"/>
+                            <constraint firstItem="N36-s6-WhU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="N07-vN-GAB"/>
+                            <constraint firstItem="UAx-up-tPg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ucz-rZ-uOk"/>
+                            <constraint firstItem="N36-s6-WhU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nU4-lj-QTJ"/>
+                            <constraint firstItem="UAx-up-tPg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="txx-nq-ELj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
