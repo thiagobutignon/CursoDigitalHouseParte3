@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TimeLineViewController.swift
 //  Instagram
 //
 //  Created by Thiago B Claramunt on 02/07/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TimeLineViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
