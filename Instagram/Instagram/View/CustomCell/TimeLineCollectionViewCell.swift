@@ -9,10 +9,16 @@
 import UIKit
 
 class TimeLineCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var image: UIImageView!
+    
+    @IBOutlet weak var commentsLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
 }
+

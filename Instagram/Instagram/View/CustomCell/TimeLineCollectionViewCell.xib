@@ -28,7 +28,7 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F6U-Zx-c4x">
                         <rect key="frame" x="0.0" y="42" width="230" height="230"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="F6U-Zx-c4x" secondAttribute="height" multiplier="1:1" id="pxk-al-zcf"/>
+                            <constraint firstAttribute="width" secondItem="F6U-Zx-c4x" secondAttribute="height" multiplier="1:1" id="pIg-e0-zQ2"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzi-aQ-rkR">
@@ -40,18 +40,23 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="F6U-Zx-c4x" secondAttribute="trailing" id="40u-S0-0g0"/>
-                <constraint firstItem="F6U-Zx-c4x" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7Fe-aD-WsO"/>
-                <constraint firstItem="F6U-Zx-c4x" firstAttribute="top" secondItem="TXz-67-mir" secondAttribute="bottom" constant="8" id="H4L-dm-pm2"/>
-                <constraint firstItem="Vzi-aQ-rkR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dDK-je-Giv"/>
-                <constraint firstAttribute="trailing" secondItem="Vzi-aQ-rkR" secondAttribute="trailing" id="h1g-0t-YrB"/>
-                <constraint firstItem="TXz-67-mir" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kLg-N0-4lw"/>
-                <constraint firstItem="Vzi-aQ-rkR" firstAttribute="top" secondItem="F6U-Zx-c4x" secondAttribute="bottom" constant="16" id="kVj-FO-00r"/>
-                <constraint firstAttribute="trailing" secondItem="TXz-67-mir" secondAttribute="trailing" id="keQ-ms-6xl"/>
-                <constraint firstItem="TXz-67-mir" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qIJ-Ij-Jfv"/>
+                <constraint firstItem="F6U-Zx-c4x" firstAttribute="top" secondItem="TXz-67-mir" secondAttribute="bottom" constant="8" id="0GK-dl-ntH"/>
+                <constraint firstAttribute="trailing" secondItem="F6U-Zx-c4x" secondAttribute="trailing" id="41k-TH-UdI"/>
+                <constraint firstItem="F6U-Zx-c4x" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7uH-KD-B1w"/>
+                <constraint firstItem="Vzi-aQ-rkR" firstAttribute="top" secondItem="F6U-Zx-c4x" secondAttribute="bottom" constant="16" id="E20-9P-dXl"/>
+                <constraint firstItem="TXz-67-mir" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="NyM-4W-V6I"/>
+                <constraint firstItem="TXz-67-mir" firstAttribute="trailing" secondItem="F6U-Zx-c4x" secondAttribute="trailing" id="QCK-Ny-Jtk"/>
+                <constraint firstItem="TXz-67-mir" firstAttribute="leading" secondItem="F6U-Zx-c4x" secondAttribute="leading" id="lPJ-fU-mc8"/>
+                <constraint firstItem="Vzi-aQ-rkR" firstAttribute="leading" secondItem="F6U-Zx-c4x" secondAttribute="leading" id="o1X-Oa-5dz"/>
+                <constraint firstItem="Vzi-aQ-rkR" firstAttribute="trailing" secondItem="F6U-Zx-c4x" secondAttribute="trailing" id="x7v-HQ-RkS"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="247" height="243"/>
+            <connections>
+                <outlet property="commentsLabel" destination="Vzi-aQ-rkR" id="Aax-lD-1cI"/>
+                <outlet property="image" destination="F6U-Zx-c4x" id="Xzy-bi-2o1"/>
+                <outlet property="titleLabel" destination="TXz-67-mir" id="bUd-yZ-Xyt"/>
+            </connections>
             <point key="canvasLocation" x="95.652173913043484" y="141.29464285714286"/>
         </collectionViewCell>
     </objects>
