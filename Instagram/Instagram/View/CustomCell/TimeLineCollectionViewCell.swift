@@ -20,5 +20,6 @@ class TimeLineCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
+
 }
 
