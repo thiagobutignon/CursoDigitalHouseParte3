@@ -284,7 +284,7 @@
                     <view key="view" contentMode="scaleToFill" id="fEC-zg-SMd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="876"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="M5u-AJ-PJg"/>
                     </view>
                 </viewController>
@@ -563,62 +563,6 @@
             </objects>
             <point key="canvasLocation" x="2802.898550724638" y="438.61607142857139"/>
         </scene>
-        <!--List Books View Controller-->
-        <scene sceneID="iYo-wT-iog">
-            <objects>
-                <viewController storyboardIdentifier="ListBooksViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kmp-SO-7ul" customClass="ListBooksViewController" customModule="Biblioteca" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qf2-Td-C3p"/>
-                        <viewControllerLayoutGuide type="bottom" id="XAd-es-yB4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9vj-qe-tT5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLC-1R-2Cg">
-                                <rect key="frame" x="16" y="120" width="382" height="760"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pc8-F1-sxp">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="622"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="Pc8-F1-sxp" firstAttribute="leading" secondItem="rLC-1R-2Cg" secondAttribute="leading" id="7YI-3R-Zsc"/>
-                                    <constraint firstAttribute="trailing" secondItem="Pc8-F1-sxp" secondAttribute="trailing" id="D3i-qH-XJC"/>
-                                    <constraint firstAttribute="bottom" secondItem="Pc8-F1-sxp" secondAttribute="bottom" constant="138" id="IkT-PF-yWN"/>
-                                    <constraint firstItem="Pc8-F1-sxp" firstAttribute="top" secondItem="rLC-1R-2Cg" secondAttribute="top" id="ohq-TX-MyO"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Book View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkQ-ze-xOQ">
-                                <rect key="frame" x="111" y="100" width="192" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <accessibility key="accessibilityConfiguration" label="Discover View"/>
-                        <constraints>
-                            <constraint firstItem="SkQ-ze-xOQ" firstAttribute="centerX" secondItem="9vj-qe-tT5" secondAttribute="centerX" id="8xk-Yl-Azk"/>
-                            <constraint firstAttribute="bottom" secondItem="rLC-1R-2Cg" secondAttribute="bottom" constant="16" id="OR4-rL-jtO"/>
-                            <constraint firstAttribute="trailing" secondItem="rLC-1R-2Cg" secondAttribute="trailing" constant="16" id="cD5-fp-Jlq"/>
-                            <constraint firstItem="rLC-1R-2Cg" firstAttribute="top" secondItem="9vj-qe-tT5" secondAttribute="top" constant="120" id="eVP-F7-UEf"/>
-                            <constraint firstItem="SkQ-ze-xOQ" firstAttribute="top" secondItem="9vj-qe-tT5" secondAttribute="top" constant="100" id="n3Q-7w-Kqg"/>
-                            <constraint firstItem="rLC-1R-2Cg" firstAttribute="leading" secondItem="9vj-qe-tT5" secondAttribute="leading" constant="16" id="xo5-jv-Fis"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="8Un-Or-2FX"/>
-                    </view>
-                    <connections>
-                        <outlet property="backgroundView" destination="rLC-1R-2Cg" id="U7Y-BO-Tfp"/>
-                        <outlet property="tableView" destination="Pc8-F1-sxp" id="19i-JW-9yB"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="azY-tC-sHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3792.753623188406" y="438.61607142857139"/>
-        </scene>
         <!--Statistic View Controller-->
         <scene sceneID="hp3-R9-FEd">
             <objects>
@@ -660,7 +604,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6P-pl-uik" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4859" y="455"/>
+            <point key="canvasLocation" x="4554" y="321"/>
+        </scene>
+        <!--List Books View Controller-->
+        <scene sceneID="q81-2F-8K7">
+            <objects>
+                <viewController storyboardIdentifier="ListBooksViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1Fk-qh-je9" customClass="ListBooksViewController" customModule="Biblioteca" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B5a-gl-8cc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mat-iN-wVZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ToF-b4-vFg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOX-9N-35k">
+                                <rect key="frame" x="16" y="120" width="382" height="760"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NPI-wH-DYY">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="622"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="NPI-wH-DYY" secondAttribute="trailing" id="5P4-C8-2mc"/>
+                                    <constraint firstItem="NPI-wH-DYY" firstAttribute="top" secondItem="LOX-9N-35k" secondAttribute="top" id="Rpb-9e-1YF"/>
+                                    <constraint firstItem="NPI-wH-DYY" firstAttribute="leading" secondItem="LOX-9N-35k" secondAttribute="leading" id="eEK-oS-otA"/>
+                                    <constraint firstAttribute="bottom" secondItem="NPI-wH-DYY" secondAttribute="bottom" constant="138" id="sJO-U1-gbE"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zl3-eo-3no">
+                                <rect key="frame" x="171.5" y="100" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" label="Discover View"/>
+                        <constraints>
+                            <constraint firstItem="LOX-9N-35k" firstAttribute="leading" secondItem="ToF-b4-vFg" secondAttribute="leading" constant="16" id="3uk-6i-nl8"/>
+                            <constraint firstItem="Zl3-eo-3no" firstAttribute="top" secondItem="ToF-b4-vFg" secondAttribute="top" constant="100" id="7mp-jX-6D7"/>
+                            <constraint firstItem="Zl3-eo-3no" firstAttribute="centerX" secondItem="ToF-b4-vFg" secondAttribute="centerX" id="WbD-Uy-pYh"/>
+                            <constraint firstItem="LOX-9N-35k" firstAttribute="top" secondItem="ToF-b4-vFg" secondAttribute="top" constant="120" id="rto-cr-8xa"/>
+                            <constraint firstAttribute="trailing" secondItem="LOX-9N-35k" secondAttribute="trailing" constant="16" id="xRX-Ue-QMH"/>
+                            <constraint firstAttribute="bottom" secondItem="LOX-9N-35k" secondAttribute="bottom" constant="16" id="zR2-Jc-V1h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PDF-TL-xdl"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="LOX-9N-35k" id="uLX-C3-rCU"/>
+                        <outlet property="tableView" destination="NPI-wH-DYY" id="tgT-zf-7K3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hyu-qn-lRI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3718.840579710145" y="366.96428571428572"/>
         </scene>
     </scenes>
     <resources>

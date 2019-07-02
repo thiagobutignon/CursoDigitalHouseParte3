@@ -12,16 +12,20 @@ import CoreData
 class ListBooksViewController: UIViewController {
     
     @IBOutlet var backgroundView: UIView!
+    var controllerColor: UIColor = UIColor(red:0.99, green:0.80, blue:0.43, alpha:1.0)
+
     
     @IBOutlet weak var tableView: UITableView!
     
-    var controllerColor: UIColor = UIColor(red: 0.29, green: 0.53, blue: 0.36, alpha: 1.0)
+   
+
     
     var libraryDataProvider: LibraryDataProvider?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         tableView.register(UINib(nibName: "BookTableViewCell", bundle: nil), forCellReuseIdentifier: "bookCell")
         
         backgroundView.layer.cornerRadius = 20

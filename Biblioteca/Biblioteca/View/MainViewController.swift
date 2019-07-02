@@ -76,12 +76,16 @@ extension MainViewController: ScrollViewControllerDelegate {
         
         var controller: UIViewController?
         
-        if scrollViewController.isControllerVisible(addBookViewController) {
-            controller = addBookViewController
-        } else if scrollViewController.isControllerVisible(listBooksViewController) {
-            controller = listBooksViewController
+        if scrollViewController.isControllerVisible(self.addBookViewController) {
+            controller = self.addBookViewController
+        } else if scrollViewController.isControllerVisible(self.statisticViewController) {
+            controller = self.statisticViewController
+        } else if scrollViewController.isControllerVisible(self.listBooksViewController) {
+            controller = self.listBooksViewController
+
         }
         
         navigationView.animate(to: controller, percent: result)
     }
 }
+
