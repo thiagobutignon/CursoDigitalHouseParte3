@@ -32,6 +32,7 @@ class ListBooksViewController: UIViewController {
         backgroundView.layer.masksToBounds = true
         libraryDataProvider = LibraryDataProvider()
         libraryDataProvider?.delegate = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
