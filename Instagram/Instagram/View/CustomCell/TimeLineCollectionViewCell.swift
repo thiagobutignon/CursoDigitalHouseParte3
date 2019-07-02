@@ -19,6 +19,14 @@ class TimeLineCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func setupCell(value: Post?) {
+        if let _post = value {
+            self.image.image = _post.image
+            self.titleLabel.text = _post.name
+            self.commentsLabel.text = _post.comments
+        }
+    }
 
 
 }
