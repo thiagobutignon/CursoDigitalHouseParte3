@@ -13,35 +13,46 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TimeLineCollectionViewCell" customModule="Instagram" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="230" height="210"/>
+            <rect key="frame" x="0.0" y="0.0" width="230" height="306"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="230" height="210"/>
+                <rect key="frame" x="0.0" y="0.0" width="230" height="306"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXz-67-mir">
-                        <rect key="frame" x="4" y="3" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXz-67-mir">
+                        <rect key="frame" x="0.0" y="0.0" width="230" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzi-aQ-rkR">
-                        <rect key="frame" x="4" y="165" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F6U-Zx-c4x">
-                        <rect key="frame" x="0.0" y="28" width="230" height="128"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F6U-Zx-c4x">
+                        <rect key="frame" x="0.0" y="42" width="230" height="230"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="F6U-Zx-c4x" secondAttribute="height" multiplier="1:1" id="pxk-al-zcf"/>
+                        </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzi-aQ-rkR">
+                        <rect key="frame" x="0.0" y="288" width="230" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="F6U-Zx-c4x" secondAttribute="trailing" id="40u-S0-0g0"/>
+                <constraint firstItem="F6U-Zx-c4x" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7Fe-aD-WsO"/>
+                <constraint firstItem="F6U-Zx-c4x" firstAttribute="top" secondItem="TXz-67-mir" secondAttribute="bottom" constant="8" id="H4L-dm-pm2"/>
+                <constraint firstItem="Vzi-aQ-rkR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dDK-je-Giv"/>
+                <constraint firstAttribute="trailing" secondItem="Vzi-aQ-rkR" secondAttribute="trailing" id="h1g-0t-YrB"/>
+                <constraint firstItem="TXz-67-mir" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kLg-N0-4lw"/>
+                <constraint firstItem="Vzi-aQ-rkR" firstAttribute="top" secondItem="F6U-Zx-c4x" secondAttribute="bottom" constant="16" id="kVj-FO-00r"/>
+                <constraint firstAttribute="trailing" secondItem="TXz-67-mir" secondAttribute="trailing" id="keQ-ms-6xl"/>
+                <constraint firstItem="TXz-67-mir" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qIJ-Ij-Jfv"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="247" height="195"/>
-            <point key="canvasLocation" x="95.652173913043484" y="125.89285714285714"/>
+            <size key="customSize" width="247" height="243"/>
+            <point key="canvasLocation" x="95.652173913043484" y="141.29464285714286"/>
         </collectionViewCell>
     </objects>
 </document>
