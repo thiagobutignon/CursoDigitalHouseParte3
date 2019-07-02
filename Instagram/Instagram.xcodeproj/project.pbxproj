@@ -12,6 +12,8 @@
 		8348817D22CC10D300C6B039 /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8348817B22CC10D300C6B039 /* TimeLine.storyboard */; };
 		8348817F22CC10D400C6B039 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8348817E22CC10D400C6B039 /* Assets.xcassets */; };
 		8348818222CC10D400C6B039 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8348818022CC10D400C6B039 /* LaunchScreen.storyboard */; };
+		8348819122CC15F200C6B039 /* TimeLineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8348818F22CC15F200C6B039 /* TimeLineCollectionViewCell.swift */; };
+		8348819222CC15F200C6B039 /* TimeLineCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8348819022CC15F200C6B039 /* TimeLineCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		8348817E22CC10D400C6B039 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8348818122CC10D400C6B039 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8348818322CC10D400C6B039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8348818F22CC15F200C6B039 /* TimeLineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineCollectionViewCell.swift; sourceTree = "<group>"; };
+		8348819022CC15F200C6B039 /* TimeLineCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +59,55 @@
 			isa = PBXGroup;
 			children = (
 				8348817722CC10D300C6B039 /* AppDelegate.swift */,
-				8348817922CC10D300C6B039 /* TimeLineViewController.swift */,
+				8348818B22CC154600C6B039 /* DataProvider */,
+				8348818A22CC154300C6B039 /* Model */,
+				8348818922CC153C00C6B039 /* View */,
 				8348817B22CC10D300C6B039 /* TimeLine.storyboard */,
 				8348817E22CC10D400C6B039 /* Assets.xcassets */,
 				8348818022CC10D400C6B039 /* LaunchScreen.storyboard */,
 				8348818322CC10D400C6B039 /* Info.plist */,
 			);
 			path = Instagram;
+			sourceTree = "<group>";
+		};
+		8348818922CC153C00C6B039 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8348818D22CC156700C6B039 /* ViewControllers */,
+				8348818C22CC155E00C6B039 /* CustomCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8348818A22CC154300C6B039 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8348818B22CC154600C6B039 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		8348818C22CC155E00C6B039 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				8348818F22CC15F200C6B039 /* TimeLineCollectionViewCell.swift */,
+				8348819022CC15F200C6B039 /* TimeLineCollectionViewCell.xib */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		8348818D22CC156700C6B039 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8348817922CC10D300C6B039 /* TimeLineViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8348818222CC10D400C6B039 /* LaunchScreen.storyboard in Resources */,
+				8348819222CC15F200C6B039 /* TimeLineCollectionViewCell.xib in Resources */,
 				8348817F22CC10D400C6B039 /* Assets.xcassets in Resources */,
 				8348817D22CC10D300C6B039 /* TimeLine.storyboard in Resources */,
 			);
@@ -136,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8348817A22CC10D300C6B039 /* TimeLineViewController.swift in Sources */,
+				8348819122CC15F200C6B039 /* TimeLineCollectionViewCell.swift in Sources */,
 				8348817822CC10D300C6B039 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
