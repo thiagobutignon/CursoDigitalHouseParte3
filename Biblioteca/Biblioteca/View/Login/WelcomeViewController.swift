@@ -31,3 +31,9 @@ class WelcomeViewController: UIViewController {
         }
     }
 }
+
+extension WelcomeViewController {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+}

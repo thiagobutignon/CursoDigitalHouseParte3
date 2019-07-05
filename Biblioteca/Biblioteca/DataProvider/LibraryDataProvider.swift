@@ -16,93 +16,27 @@ protocol LibraryDataProviderDelegate: class {
 
 class LibraryDataProvider {
     
+    static let shared = LibraryDataProvider()
+    
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    private var books = [Book]()
-    private var filteredBooks = [Book]()
-    
-    func deleteAll(){
-        
-        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Book")
-        let request = NSBatchDeleteRequest(fetchRequest: fetch)
-       
-        
-        do {
-            _ = try context.execute(request)
-        } catch {
-            print("\(error)")
-        }
-        
-    }
+
     
     weak var delegate: LibraryDataProviderDelegate?
     var book: [NSManagedObjectContext] = []
     
     func numberOfRowsInSection() -> Int {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Book")
-        
-        do {
-            let count = try context.count(for: fetchRequest)
-            return count
-        } catch {
-            print("\(error)")
-        }
+//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Book")
+//        
+//        do {
+//            let count = try context.count(for: fetchRequest)
+//            return count
+//        } catch {
+//            print("\(error)")
+//        }
         return 0
-    }
-  
-    func retriveStringData(forKey: String) -> String {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return "" }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Book")
-        
-        do {
-            let result = try managedContext.fetch(fetchRequest)
-            for data in result as! [NSManagedObject] {
-                return data.value(forKey: forKey) as! String
-            }
-        } catch {
-            print("Deu ruim!")
-        }
-        return ""
-    }
-    
-    func retriveInt16Data(forKey: String) -> Int16 {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return 0 }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Book")
-        
-        do {
-            let result = try managedContext.fetch(fetchRequest)
-            for data in result as! [NSManagedObject] {
-                return data.value(forKey: forKey) as! Int16
-            }
-        } catch {
-            print("Deu ruim!")
-        }
-        return 0
-    }
-    
-    func retriveDoubleData(forKey: String) -> Double {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return 0.0 }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Book")
-        
-        do {
-            let result = try managedContext.fetch(fetchRequest)
-            for data in result as! [NSManagedObject] {
-                return data.value(forKey: forKey) as! Double            }
-        } catch {
-            print("Deu ruim!")
-        }
-        return 0.0
     }
     
 }
+
+

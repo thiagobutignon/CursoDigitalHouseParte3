@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class StatisticViewController: UIViewController {
 
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    
     @IBOutlet var backgroundView: UIView!
     
     var controllerColor: UIColor = UIColor(red:0.42, green:0.36, blue:0.91, alpha:1.0)

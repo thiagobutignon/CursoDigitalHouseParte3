@@ -2,7 +2,7 @@
 //  Book+CoreDataProperties.swift
 //  Biblioteca
 //
-//  Created by Thiago B Claramunt on 01/07/19.
+//  Created by Thiago B Claramunt on 03/07/19.
 //  Copyright © 2019 Thiago B Claramunt. All rights reserved.
 //
 //
@@ -21,9 +21,8 @@ extension Book {
     @NSManaged public var categoryType: String?
     @NSManaged public var isbn: String?
     @NSManaged public var language: String?
-    @NSManaged public var price: Double
-    @NSManaged public var stock: Int16
+    @NSManaged public var price: String?
+    @NSManaged public var stock: String?
     @NSManaged public var title: String?
-    @NSManaged public var idThumbnail: Thumbnail?
 
 }

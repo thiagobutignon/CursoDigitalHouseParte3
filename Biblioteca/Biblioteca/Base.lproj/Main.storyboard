@@ -312,7 +312,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="3Dk-55-WX1"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Cadastrar"/>
                                         <connections>
                                             <action selector="addBookButton:" destination="FAH-Wk-uSo" eventType="touchUpInside" id="eMn-Bd-W63"/>
                                         </connections>
@@ -389,7 +389,7 @@
                                                 <rect key="frame" x="48" y="0.0" width="302" height="32"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -435,7 +435,7 @@
                                                 <rect key="frame" x="48" y="0.0" width="302" height="32"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -458,7 +458,7 @@
                                                 <rect key="frame" x="48" y="0.0" width="302" height="32"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -479,6 +479,9 @@
                                             <segment title="Web"/>
                                             <segment title="Outros"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="indexChanged:" destination="FAH-Wk-uSo" eventType="valueChanged" id="w5y-vP-Ai6"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -656,11 +659,27 @@
                     <connections>
                         <outlet property="backgroundView" destination="LOX-9N-35k" id="uLX-C3-rCU"/>
                         <outlet property="tableView" destination="NPI-wH-DYY" id="tgT-zf-7K3"/>
+                        <segue destination="6YJ-dr-Sv9" kind="presentation" identifier="segueDetailVIewController" id="YYS-45-iCh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hyu-qn-lRI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3718.840579710145" y="366.96428571428572"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="gFf-aX-XDP">
+            <objects>
+                <viewController id="6YJ-dr-Sv9" customClass="DetailViewController" customModule="Biblioteca" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zmk-8q-kdN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SDp-ka-kjf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Orf-G6-sx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3719" y="1076"/>
         </scene>
     </scenes>
     <resources>

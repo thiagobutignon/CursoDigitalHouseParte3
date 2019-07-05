@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Book" representedClassName=".Book" syncable="YES">
-        <attribute name="author" attributeType="String" syncable="YES"/>
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="categoryType" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="isbn" attributeType="String" syncable="YES"/>
-        <attribute name="language" attributeType="String" syncable="YES"/>
-        <attribute name="price" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="stock" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="title" attributeType="String" syncable="YES"/>
-        <relationship name="idThumbnail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Thumbnail" inverseName="book" inverseEntity="Thumbnail" syncable="YES"/>
+        <attribute name="isbn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stock" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="FullRes" representedClassName=".FullRes" syncable="YES">
         <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
-        <relationship name="thumbnail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Thumbnail" inverseName="fullRes" inverseEntity="Thumbnail" syncable="YES"/>
     </entity>
     <entity name="Thumbnail" representedClassName=".Thumbnail" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
-        <relationship name="book" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Book" inverseName="idThumbnail" inverseEntity="Book" syncable="YES"/>
-        <relationship name="fullRes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FullRes" inverseName="thumbnail" inverseEntity="FullRes" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Book" positionX="111.9765625" positionY="-118.3984375" width="128" height="163"/>
-        <element name="FullRes" positionX="-45" positionY="54" width="128" height="73"/>
-        <element name="Thumbnail" positionX="268.1015625" positionY="106.58984375" width="128" height="103"/>
+        <element name="Book" positionX="111.9765625" positionY="-118.3984375" width="128" height="148"/>
+        <element name="FullRes" positionX="-45" positionY="54" width="128" height="60"/>
+        <element name="Thumbnail" positionX="268.1015625" positionY="106.58984375" width="128" height="75"/>
     </elements>
 </model>

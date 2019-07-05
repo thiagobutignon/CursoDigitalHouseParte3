@@ -21,7 +21,7 @@ class BookTableViewCell: UITableViewCell {
     }
     
     func setup(book: Book) {
-        self.stockLabel.text = String(book.stock)
+        self.stockLabel.text = book.stock
         self.authorLabel.text = book.author
         self.titleLabel.text = book.title
     }
