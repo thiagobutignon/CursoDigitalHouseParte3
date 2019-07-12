@@ -14,7 +14,9 @@ protocol ColoredView {
 
 class MainViewController: UIViewController {
     
+    
     var scrollViewController: ScrollViewController!
+    
     
     lazy var addBookViewController: UIViewController! = {
         return self.storyboard?.instantiateViewController(withIdentifier: "AddBookViewController")
@@ -27,22 +29,26 @@ class MainViewController: UIViewController {
     lazy var statisticViewController: UIViewController! = {
         return self.storyboard?.instantiateViewController(withIdentifier: "StatisticViewController")
     }()
-
+    
+    
+    
     @IBOutlet var navigationView: NavigationView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller = segue.destination as? ListBooksViewController {
-            listBooksViewController = controller
+            self.listBooksViewController = controller
         } else if let controller = segue.destination as? ScrollViewController {
             scrollViewController = controller
             scrollViewController.delegate = self
+            
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.mudar()
     }
-
+    
 }
 
 extension MainViewController {
@@ -55,16 +61,27 @@ extension MainViewController {
     }
     
     @IBAction func handleListButton(_ sender: UITapGestureRecognizer) {
+        
         scrollViewController.setController(to: listBooksViewController, animated: true)
+    }
+    
+    func mudar() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.scrollme), name: NSNotification.Name(rawValue: "mudarTela"), object: nil)
+    }
+    
+    @objc func scrollme() {
+        scrollViewController.setController(to: statisticViewController, animated: true)
     }
 }
 
 extension MainViewController: ScrollViewControllerDelegate {
+    
     var viewControllers: [UIViewController?] {
         return [addBookViewController,listBooksViewController, statisticViewController]
     }
     
     var initialViewController: UIViewController {
+        
         return listBooksViewController
     }
     
@@ -82,10 +99,10 @@ extension MainViewController: ScrollViewControllerDelegate {
             controller = self.statisticViewController
         } else if scrollViewController.isControllerVisible(self.listBooksViewController) {
             controller = self.listBooksViewController
-
+            
         }
         
         navigationView.animate(to: controller, percent: result)
     }
+    
 }
-

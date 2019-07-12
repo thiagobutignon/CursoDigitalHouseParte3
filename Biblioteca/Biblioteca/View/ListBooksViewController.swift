@@ -9,11 +9,11 @@
 import UIKit
 import CoreData
 
+
 class ListBooksViewController: UIViewController {
     
     @IBOutlet var backgroundView: UIView!
     var controllerColor: UIColor = UIColor(red:0.99, green:0.80, blue:0.43, alpha:1.0)
-    
     
     @IBOutlet weak var tableView: UITableView!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -22,7 +22,7 @@ class ListBooksViewController: UIViewController {
     var libraryDataProvider: LibraryDataProvider?
     var selectedIndex: Int!
     var filteredBook: [Book] = []
-    
+    var delegate: ScrollViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,18 +82,23 @@ extension ListBooksViewController: UITableViewDelegate, UITableViewDataSource {
         self.selectedIndex = indexPath.row
         self.filteredBook = [self.books[selectedIndex]]
         
-        performSegue(withIdentifier: "segueDetailVIewController", sender: self)
-        tableView.deselectRow(at: indexPath, animated: true)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "mudarTela"), object: nil)
+        
+
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueDetailVIewController" {
-            let detail = segue.destination as! DetailViewController
+        if segue.identifier == "telalateral" {
+            let detail = segue.destination as! StatisticViewController
             detail.book = filteredBook[0]
             
         }
     }
     
     
+}
+
+extension ListBooksViewController {
+
 }
 
 extension ListBooksViewController: LibraryDataProviderDelegate {

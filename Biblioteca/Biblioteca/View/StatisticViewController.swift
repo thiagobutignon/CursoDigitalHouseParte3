@@ -11,6 +11,7 @@ import CoreData
 
 class StatisticViewController: UIViewController {
 
+    var book: Book!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     
