@@ -9,16 +9,7 @@
         <attribute name="stock" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="FullRes" representedClassName=".FullRes" syncable="YES">
-        <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
-    </entity>
-    <entity name="Thumbnail" representedClassName=".Thumbnail" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
-    </entity>
     <elements>
         <element name="Book" positionX="111.9765625" positionY="-118.3984375" width="128" height="148"/>
-        <element name="FullRes" positionX="-45" positionY="54" width="128" height="60"/>
-        <element name="Thumbnail" positionX="268.1015625" positionY="106.58984375" width="128" height="75"/>
     </elements>
 </model>

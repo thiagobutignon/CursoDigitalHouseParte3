@@ -14,8 +14,13 @@ protocol ScrollViewControllerDelegate {
     func scrollViewDidScroll()
 }
 
-class ScrollViewController: UIViewController {
+enum ScreenType {
+    case detail, statistic, none
+}
 
+class ScrollViewController: UIViewController {
+    var welcomeText: String?
+    
     var scrollView: UIScrollView {
         return view as! UIScrollView
     }
@@ -44,6 +49,9 @@ class ScrollViewController: UIViewController {
         
         for (index, controller) in viewControllers.enumerated() {
             if let controller = controller {
+                if controller.isKind(of: ListBooksViewController.self) {
+                    (controller as! ListBooksViewController).welcomeText = self.welcomeText
+                }
                 addChild(controller)
                 controller.view.frame = frame(for: index)
                 scrollView.addSubview(controller.view)
@@ -60,7 +68,7 @@ class ScrollViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 }
 
@@ -78,9 +86,11 @@ fileprivate extension ScrollViewController {
 }
 
 extension ScrollViewController {
-    public func setController(to controller: UIViewController, animated: Bool) {
+    public func setController(to controller: UIViewController, animated: Bool, data: [Book]? = nil, screenType: ScreenType = .none) {
+        
         guard let index = indexFor(controller: controller) else { return }
         let contentOffset = CGPoint(x: pageSize.width * CGFloat(index), y: 0)
+        
         
         if animated {
             UIView.animate(withDuration: 0.2, delay: 0, options: [UIView.AnimationOptions.curveEaseOut], animations: {
@@ -89,6 +99,18 @@ extension ScrollViewController {
         } else {
             scrollView.setContentOffset(contentOffset, animated: animated)
         }
+        
+        for (_, controller) in viewControllers.enumerated() {
+            if let controller = controller {
+                if controller.isKind(of: StatisticViewController.self) {
+                    (controller as! StatisticViewController).book = data
+                    (controller as! StatisticViewController).screenType = screenType
+                    (controller as! StatisticViewController).setupView()
+                }
+                
+            }
+        }
+        
     }
     
     public func isControllerVisible(_ controller: UIViewController?) -> Bool {

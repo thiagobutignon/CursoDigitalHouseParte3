@@ -12,6 +12,9 @@ import CoreData
 
 class ListBooksViewController: UIViewController {
     
+    @IBOutlet weak var welcomeLabel: UILabel!
+    var welcomeText: String?
+    
     @IBOutlet var backgroundView: UIView!
     var controllerColor: UIColor = UIColor(red:0.99, green:0.80, blue:0.43, alpha:1.0)
     
@@ -37,6 +40,14 @@ class ListBooksViewController: UIViewController {
         tableView.dataSource = self
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.fetchData), name: NSNotification.Name(rawValue: "load"), object: nil)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+        self.welcomeLabel.text = "Bem vindo \(self.welcomeText ?? "") "
         
     }
     
@@ -82,23 +93,15 @@ extension ListBooksViewController: UITableViewDelegate, UITableViewDataSource {
         self.selectedIndex = indexPath.row
         self.filteredBook = [self.books[selectedIndex]]
         
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "mudarTela"), object: nil)
+        let bookData = self.filteredBook
         
-
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "mudarTela"), object: nil, userInfo: ["bookData" : bookData])
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "telalateral" {
-            let detail = segue.destination as! StatisticViewController
-            detail.book = filteredBook[0]
-            
-        }
-    }
-    
     
 }
 
 extension ListBooksViewController {
-
+    
 }
 
 extension ListBooksViewController: LibraryDataProviderDelegate {

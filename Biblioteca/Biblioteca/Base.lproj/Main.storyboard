@@ -564,7 +564,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekv-5P-pMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2802.898550724638" y="438.61607142857139"/>
+            <point key="canvasLocation" x="2759" y="444"/>
         </scene>
         <!--Statistic View Controller-->
         <scene sceneID="hp3-R9-FEd">
@@ -582,10 +582,10 @@
                                 <rect key="frame" x="16" y="120" width="382" height="760"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Staticts view controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tb5-dv-dPK">
-                                <rect key="frame" x="119.5" y="100" width="175" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Library Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tb5-dv-dPK">
+                                <rect key="frame" x="16" y="80" width="382" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="34"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -597,7 +597,8 @@
                             <constraint firstAttribute="trailing" secondItem="pY4-Di-MHo" secondAttribute="trailing" constant="16" id="aKh-RC-mfh"/>
                             <constraint firstItem="tb5-dv-dPK" firstAttribute="centerX" secondItem="Mfo-pn-a7u" secondAttribute="centerX" id="fT2-VF-r0S"/>
                             <constraint firstItem="pY4-Di-MHo" firstAttribute="leading" secondItem="Mfo-pn-a7u" secondAttribute="leading" constant="16" id="kH8-Ug-YKo"/>
-                            <constraint firstItem="tb5-dv-dPK" firstAttribute="top" secondItem="Mfo-pn-a7u" secondAttribute="top" constant="100" id="tiO-Q0-vZQ"/>
+                            <constraint firstItem="tb5-dv-dPK" firstAttribute="leading" secondItem="mZ3-HF-9h1" secondAttribute="leading" constant="16" id="the-91-exl"/>
+                            <constraint firstItem="tb5-dv-dPK" firstAttribute="top" secondItem="Mfo-pn-a7u" secondAttribute="top" constant="80" id="tiO-Q0-vZQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mZ3-HF-9h1"/>
                     </view>
@@ -607,7 +608,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6P-pl-uik" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4554" y="321"/>
+            <point key="canvasLocation" x="4310" y="439"/>
         </scene>
         <!--List Books View Controller-->
         <scene sceneID="q81-2F-8K7">
@@ -637,19 +638,21 @@
                                     <constraint firstAttribute="bottom" secondItem="NPI-wH-DYY" secondAttribute="bottom" constant="138" id="sJO-U1-gbE"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zl3-eo-3no">
-                                <rect key="frame" x="171.5" y="100" width="71" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Book" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Zl3-eo-3no">
+                                <rect key="frame" x="16" y="80" width="382" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="34"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" label="Discover View"/>
                         <constraints>
+                            <constraint firstItem="Zl3-eo-3no" firstAttribute="leading" secondItem="PDF-TL-xdl" secondAttribute="leading" constant="16" id="1LV-IT-xCx"/>
                             <constraint firstItem="LOX-9N-35k" firstAttribute="leading" secondItem="ToF-b4-vFg" secondAttribute="leading" constant="16" id="3uk-6i-nl8"/>
-                            <constraint firstItem="Zl3-eo-3no" firstAttribute="top" secondItem="ToF-b4-vFg" secondAttribute="top" constant="100" id="7mp-jX-6D7"/>
+                            <constraint firstItem="Zl3-eo-3no" firstAttribute="top" secondItem="ToF-b4-vFg" secondAttribute="top" constant="80" id="7mp-jX-6D7"/>
                             <constraint firstItem="Zl3-eo-3no" firstAttribute="centerX" secondItem="ToF-b4-vFg" secondAttribute="centerX" id="WbD-Uy-pYh"/>
+                            <constraint firstItem="PDF-TL-xdl" firstAttribute="trailing" secondItem="Zl3-eo-3no" secondAttribute="trailing" constant="16" id="qZF-Ug-Vdc"/>
                             <constraint firstItem="LOX-9N-35k" firstAttribute="top" secondItem="ToF-b4-vFg" secondAttribute="top" constant="120" id="rto-cr-8xa"/>
                             <constraint firstAttribute="trailing" secondItem="LOX-9N-35k" secondAttribute="trailing" constant="16" id="xRX-Ue-QMH"/>
                             <constraint firstAttribute="bottom" secondItem="LOX-9N-35k" secondAttribute="bottom" constant="16" id="zR2-Jc-V1h"/>
@@ -659,11 +662,12 @@
                     <connections>
                         <outlet property="backgroundView" destination="LOX-9N-35k" id="uLX-C3-rCU"/>
                         <outlet property="tableView" destination="NPI-wH-DYY" id="tgT-zf-7K3"/>
+                        <outlet property="welcomeLabel" destination="Zl3-eo-3no" id="MZ2-jx-W6N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hyu-qn-lRI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3718.840579710145" y="366.96428571428572"/>
+            <point key="canvasLocation" x="3523" y="444"/>
         </scene>
     </scenes>
     <resources>

@@ -14,9 +14,11 @@ protocol ColoredView {
 
 class MainViewController: UIViewController {
     
+    var welcomeText: String = ""
     
     var scrollViewController: ScrollViewController!
     
+    var bookData: [Book] = []
     
     lazy var addBookViewController: UIViewController! = {
         return self.storyboard?.instantiateViewController(withIdentifier: "AddBookViewController")
@@ -36,10 +38,14 @@ class MainViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller = segue.destination as? ListBooksViewController {
+            
             self.listBooksViewController = controller
+            
+            
         } else if let controller = segue.destination as? ScrollViewController {
             scrollViewController = controller
             scrollViewController.delegate = self
+            scrollViewController.welcomeText = self.welcomeText
             
         }
     }
@@ -57,7 +63,7 @@ extension MainViewController {
     }
     
     @IBAction func handleStatisticIconTap(_ sender: UITapGestureRecognizer) {
-        scrollViewController.setController(to: statisticViewController, animated: true)
+        scrollViewController.setController(to: statisticViewController, animated: true, data: self.bookData, screenType: .statistic)
     }
     
     @IBAction func handleListButton(_ sender: UITapGestureRecognizer) {
@@ -66,11 +72,15 @@ extension MainViewController {
     }
     
     func mudar() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.scrollme), name: NSNotification.Name(rawValue: "mudarTela"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.scrollme(notification:)), name: NSNotification.Name(rawValue: "mudarTela"), object: nil)
+        
     }
     
-    @objc func scrollme() {
-        scrollViewController.setController(to: statisticViewController, animated: true)
+    @objc func scrollme(notification: NSNotification) {
+        let info = notification.userInfo
+        self.bookData = info!["bookData"] as! [Book]
+        scrollViewController.setController(to: statisticViewController, animated: true, data: self.bookData, screenType: .detail)
     }
 }
 

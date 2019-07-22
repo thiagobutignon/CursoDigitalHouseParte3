@@ -24,10 +24,20 @@ class WelcomeViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: UIButton) {
         if usernameTextField.hasText == true {
+            
             performSegue(withIdentifier: "loggedIn", sender: nil)
+            
         } else {
             usernameAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(usernameAlert, animated: true, completion: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "loggedIn" {
+            let vc = segue.destination as? MainViewController
+            let username: String = usernameTextField.text ?? ""
+            vc?.welcomeText = username
         }
     }
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8310F1A122E299EA007D2B04 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310F1A022E299EA007D2B04 /* DetailView.swift */; };
+		8310F1A322E299F6007D2B04 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8310F1A222E299F6007D2B04 /* DetailView.xib */; };
+		8310F1A522E2A089007D2B04 /* EstatisticaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8310F1A422E2A089007D2B04 /* EstatisticaView.swift */; };
+		8310F1A722E2A093007D2B04 /* EstatisticaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8310F1A622E2A093007D2B04 /* EstatisticaView.xib */; };
 		834881B322CD4C8D00C6B039 /* Book+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834881B122CD4C8D00C6B039 /* Book+CoreDataClass.swift */; };
 		834881B422CD4C8D00C6B039 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834881B222CD4C8D00C6B039 /* Book+CoreDataProperties.swift */; };
 		836A6E1B22CA780400E33DA2 /* AddBookDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A6E1A22CA780400E33DA2 /* AddBookDataProvider.swift */; };
@@ -18,7 +22,6 @@
 		83850AAB22C2B2100017575B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83850AA922C2B2100017575B /* LaunchScreen.storyboard */; };
 		83850ABF22C2C5A80017575B /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83850ABD22C2C5A80017575B /* BookTableViewCell.swift */; };
 		83850AC022C2C5A80017575B /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83850ABE22C2C5A80017575B /* BookTableViewCell.xib */; };
-		8385DC4222CE8360006063C8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8385DC4122CE8360006063C8 /* DetailViewController.swift */; };
 		83CB58B022C32EF0001A1B39 /* LibraryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB58AF22C32EF0001A1B39 /* LibraryDataProvider.swift */; };
 		83CB58BE22C4326C001A1B39 /* Library.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83CB58BC22C4326C001A1B39 /* Library.xcdatamodeld */; };
 		83CB58C622C526AF001A1B39 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CB58C522C526AF001A1B39 /* MainViewController.swift */; };
@@ -30,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8310F1A022E299EA007D2B04 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		8310F1A222E299F6007D2B04 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		8310F1A422E2A089007D2B04 /* EstatisticaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstatisticaView.swift; sourceTree = "<group>"; };
+		8310F1A622E2A093007D2B04 /* EstatisticaView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EstatisticaView.xib; sourceTree = "<group>"; };
 		834881B122CD4C8D00C6B039 /* Book+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataClass.swift"; sourceTree = "<group>"; };
 		834881B222CD4C8D00C6B039 /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		836A6E1A22CA780400E33DA2 /* AddBookDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookDataProvider.swift; sourceTree = "<group>"; };
@@ -43,7 +50,6 @@
 		83850AAC22C2B2100017575B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83850ABD22C2C5A80017575B /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		83850ABE22C2C5A80017575B /* BookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
-		8385DC4122CE8360006063C8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		83CB58AF22C32EF0001A1B39 /* LibraryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryDataProvider.swift; sourceTree = "<group>"; };
 		83CB58BD22C4326C001A1B39 /* Library.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Library.xcdatamodel; sourceTree = "<group>"; };
 		83CB58C522C526AF001A1B39 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +71,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8310F19F22E29992007D2B04 /* Statistic */ = {
+			isa = PBXGroup;
+			children = (
+				8310F1A022E299EA007D2B04 /* DetailView.swift */,
+				8310F1A222E299F6007D2B04 /* DetailView.xib */,
+				8310F1A422E2A089007D2B04 /* EstatisticaView.swift */,
+				8310F1A622E2A093007D2B04 /* EstatisticaView.xib */,
+			);
+			path = Statistic;
+			sourceTree = "<group>";
+		};
 		83850A9422C2B2100017575B = {
 			isa = PBXGroup;
 			children = (
@@ -130,10 +147,10 @@
 			children = (
 				8385DC3F22CDB2C9006063C8 /* Login */,
 				83CB58C422C50F30001A1B39 /* NavigationView */,
+				8310F19F22E29992007D2B04 /* Statistic */,
 				83CB58C522C526AF001A1B39 /* MainViewController.swift */,
 				83CB58CB22C52958001A1B39 /* StatisticViewController.swift */,
 				83CB58C922C528D5001A1B39 /* AddBookViewController.swift */,
-				8385DC4122CE8360006063C8 /* DetailViewController.swift */,
 				83CB58CD22C52B9F001A1B39 /* ListBooksViewController.swift */,
 				83CB58C722C52716001A1B39 /* ScrollViewController.swift */,
 			);
@@ -210,7 +227,9 @@
 				83850AC022C2C5A80017575B /* BookTableViewCell.xib in Resources */,
 				83850AAB22C2B2100017575B /* LaunchScreen.storyboard in Resources */,
 				83850AA822C2B2100017575B /* Assets.xcassets in Resources */,
+				8310F1A722E2A093007D2B04 /* EstatisticaView.xib in Resources */,
 				83850AA622C2B2100017575B /* Main.storyboard in Resources */,
+				8310F1A322E299F6007D2B04 /* DetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,12 +242,13 @@
 			files = (
 				83CB58D022C52C19001A1B39 /* NavigationView.swift in Sources */,
 				83850AA322C2B2100017575B /* WelcomeViewController.swift in Sources */,
+				8310F1A122E299EA007D2B04 /* DetailView.swift in Sources */,
 				836A6E2322CAB19E00E33DA2 /* NavigationViewAnimation.swift in Sources */,
+				8310F1A522E2A089007D2B04 /* EstatisticaView.swift in Sources */,
 				83CB58CE22C52B9F001A1B39 /* ListBooksViewController.swift in Sources */,
 				83CB58CC22C52958001A1B39 /* StatisticViewController.swift in Sources */,
 				83CB58CA22C528D5001A1B39 /* AddBookViewController.swift in Sources */,
 				83CB58B022C32EF0001A1B39 /* LibraryDataProvider.swift in Sources */,
-				8385DC4222CE8360006063C8 /* DetailViewController.swift in Sources */,
 				83850AA122C2B2100017575B /* AppDelegate.swift in Sources */,
 				83850ABF22C2C5A80017575B /* BookTableViewCell.swift in Sources */,
 				83CB58C622C526AF001A1B39 /* MainViewController.swift in Sources */,
